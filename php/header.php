@@ -1,4 +1,4 @@
-<?php require "database.php"; ?>
+<?php require "database.php"; // here we get inn the database ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -7,6 +7,7 @@
 		<style>
 			body {
 				<?php
+					// Lets parse the database for some css properties and echo them out
 					$sql = $database->prepare("select * from settings;");
 					$sql->setFetchMode(PDO::FETCH_OBJ);
 					$sql->execute();
